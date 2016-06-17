@@ -16,7 +16,7 @@
 //每行显示格子的列数
 #define PerRowGridCount 4
 //每列显示格子的行数
-#define PerColumGridCount 3
+#define PerColumGridCount 4
 //每个格子的宽度
 #define GridWidth (ScreenWidth/PerRowGridCount)
 //每个格子的X轴间隔

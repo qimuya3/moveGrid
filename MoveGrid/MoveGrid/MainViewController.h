@@ -14,3 +14,10 @@
 @property(nonatomic, strong)NSMutableArray *addGridArray;
 
 @end
+
+
+@interface RecordData : NSObject
+
+@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, assign) NSInteger idIndex;
+@end

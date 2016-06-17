@@ -50,7 +50,7 @@
         [self setGridId:gridId];
         [self setGridIndex:index];
         [self setGridCenterPoint:self.center];
-        
+        [self setTag:999];
         //判断是否要添加删除图标
         if (isAddDelete) {
             //当长按时添加删除按钮图标
@@ -62,7 +62,7 @@
             [deleteBtn setHidden:YES];
             
             /////////////
-            [deleteBtn setTag:gridId];
+            [deleteBtn setTag:gridId+99999];
             [self addSubview:deleteBtn];
             
             //添加长按手势

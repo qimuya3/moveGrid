@@ -100,7 +100,7 @@
         if (gridItem.isChecked && gridItem.gridId != clickItem.gridId)
         {
             //隐藏删图标
-            UIButton *deleteButton = (UIButton *)[self.showMoreGridView viewWithTag:gridItem.gridId];
+            UIButton *deleteButton = (UIButton *)[self.showMoreGridView viewWithTag:gridItem.gridId+99999];
             deleteButton.hidden = YES;
             
             [gridItem setIsChecked: NO];
@@ -126,7 +126,7 @@
     }else{
         for (NSInteger i = 0; i < self.gridItemArray.count; i++) {
             CustomGrid *deleteGird = self.gridItemArray[i];
-            if (deleteGird.gridId == deleteButton.tag) {
+            if (deleteGird.gridId+99999 == deleteButton.tag) {
                 //从视图上移除格子
                 [deleteGird removeFromSuperview];
                 
@@ -184,7 +184,7 @@
             grid.isChecked = YES;
             
             //显示格子右上角的添加图标
-            UIButton *addButton = (UIButton *)[longPressGesture.view viewWithTag:grid.gridId];
+            UIButton *addButton = (UIButton *)[longPressGesture.view viewWithTag:grid.gridId+99999];
             addButton.hidden = NO;
             
             //给选中的格子添加放大的特效
@@ -222,7 +222,7 @@
             if (gridItem.isChecked)
             {
                 //隐藏删图标
-                UIButton *deleteButton = (UIButton *)[self.showMoreGridView viewWithTag:gridItem.gridId];
+                UIButton *deleteButton = (UIButton *)[self.showMoreGridView viewWithTag:gridItem.gridId+99999];
                 deleteButton.hidden = YES;
                 
                 [gridItem setIsChecked: NO];
